@@ -172,21 +172,28 @@
         </div>
     </footer>
 
-    <script>
-        // Мобильное меню
-        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-            document.querySelector('.nav').classList.toggle('active');
-        });
+<script>
+    // Мобильное меню
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+        document.querySelector('.nav').classList.toggle('active');
+    });
 
-        // Плавная прокрутка
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+    // Плавная прокрутка и закрытие меню
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            // Закрываем меню, если оно открыто (для мобильной версии)
+            const nav = document.querySelector('.nav');
+            if (nav.classList.contains('active')) {
+                nav.classList.remove('active');
+            }
+            
+            // Плавная прокрутка
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
             });
         });
-    </script>
+    });
+</script>
 </body>
 </html>
