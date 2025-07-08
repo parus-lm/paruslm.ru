@@ -275,7 +275,7 @@ img {
     transition: var(--transition);
 }
 
-.advantage:hover {
+.advantage-item:hover {
     transform: translateY(-10px);
 }
 
