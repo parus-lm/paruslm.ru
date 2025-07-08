@@ -272,6 +272,11 @@ img {
     border-radius: 10px;
     text-align: center;
     box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.advantage:hover {
+    transform: translateY(-10px);
 }
 
 .advantage-icon {
@@ -516,64 +521,5 @@ img {
     
     .social-icons {
         justify-content: center;
-    }
-}
-
-/* Обновленные стили для секции контактов */
-.contacts {
-    padding: 80px 0;
-    background-color: var(--light-gray);
-}
-
-.contacts-content {
-    display: flex;
-    justify-content: center;
-}
-
-.contact-item {
-    display: inline-flex;
-    align-items: center;
-    background-color: var(--white);
-    padding: 20px 30px;
-    border-radius: 50px;
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
-}
-
-.contact-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.contact-item i {
-    font-size: 1.5rem;
-    color: var(--accent-color);
-    margin-right: 15px;
-}
-
-.contact-item a {
-    color: var(--primary-color);
-    font-weight: 500;
-    font-size: 1.2rem;
-    transition: var(--transition);
-}
-
-.contact-item a:hover {
-    color: var(--accent-dark);
-}
-
-/* Адаптивность */
-@media (max-width: 576px) {
-    .contact-item {
-        padding: 15px 25px;
-    }
-    
-    .contact-item i {
-        font-size: 1.3rem;
-        margin-right: 10px;
-    }
-    
-    .contact-item a {
-        font-size: 1rem;
     }
 }
